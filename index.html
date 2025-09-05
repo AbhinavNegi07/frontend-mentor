@@ -1,21 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor Challenges</title>
-  </head>
-  <body>
-    <div>
-      <h1>Link to individual Challenges</h1>
-      <ul>
-        <li>
-          <a
-            href="https://abhinavnegi07.github.io/frontend-mentor/qr-code-component-main/"
-            >QR Code Component</a
-          >
-        </li>
-      </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Frontend Mentor Challenges</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #555;
+            --background-color: #f4f4f4;
+            --card-background: #fff;
+            --link-color: #007bff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        p.intro {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .challenge-item {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .challenge-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .challenge-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 1.5rem;
+        }
+
+        .challenge-item h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+
+        .challenge-item p {
+            margin: 0;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .challenge-item a:hover h2 {
+            color: var(--link-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Frontend Mentor Portfolio</h1>
+        <p class="intro">A collection of my solutions to various Frontend Mentor coding challenges.</p>
+
+        <ul class="challenge-grid" id="challenge-list">
+            <li class="challenge-item">
+                <a href="https://abhinavnegi07.github.io/frontend-mentor/qr-code-component-main/">
+                    <h2>QR Code Component</h2>
+                    <p>A simple QR code component built with HTML and CSS.</p>
+                </a>
+            </li>
+        </ul>
     </div>
-  </body>
+
+</body>
 </html>
